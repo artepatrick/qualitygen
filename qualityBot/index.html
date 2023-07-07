@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Quality Bot">
+  <meta property="og:description" content="Conheça a Quality com a ajuda de um assistente virtual!">
+  <meta property="og:image" content="https://i.postimg.cc/Kvr8CZ2h/quality-logo.png">
+  <meta name="author" content="Patrick Bonnereau @artepatrick">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://i.postimg.cc/Kvr8CZ2h/quality-logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>First Bot</title>
+</head>
+
+<body>
+  <div class="matchChoice" id="matchChoice"></div>
+  <div class="container">
+    <div id="imgCapa"></div>
+    <h1 id="headingH1">Pergunte!</h1>
+    <div id="dataBaseDescription" class="classDataBaseDescription">
+     <p id="descriptionP">O que você deseja saber hoje?</p>
+    </div>
+    <form id="apiForm">
+      <div class="form-group">
+       <!--  <label for="prompt">Pergunta:</label> -->
+        <input type="text" id="prompt" name="prompt" required placeholder="Digite sua pergunta aqui">
+      </div>
+      <div class="form-group" id="comment-group">
+        <label for="comment" id="commentLabel">Comentário:</label>
+        <input type="text" id="comment" name="comment" placeholder="Decrição opcional">
+      </div>
+      <button id="button" type="submit">Perguntar!</button>
+    </form>
+    <div id="response" class="response"></div>
+    <div id="loading1" class="loading">
+      <!-- waiting https://assets8.lottiefiles.com/packages/lf20_cAsTAnQtxv.json -->
+      <!-- https://assets8.lottiefiles.com/packages/lf20_8uymq2ak.json -->
+      <!-- checked  https://assets8.lottiefiles.com/packages/lf20_WY43rg.json -->        
+      <lottie-player id="lottie1" src="https://assets8.lottiefiles.com/packages/lf20_TNLWvgoeMy.json" background="transparent" speed="1" loop autoplay>
+      <!-- Relógio https://assets8.lottiefiles.com/packages/lf20_09cb206w.json -->
+      <!-- Giro cores https://assets8.lottiefiles.com/packages/lf20_TNLWvgoeMy.json -->
+      <!-- barra dinâmica https://assets8.lottiefiles.com/packages/lf20_hgrfG0L3Xo.json -->
+      <!-- <img id="loadingImg" src="https://i.postimg.cc/JzL71tvs/loading1.gif" alt=""> -->
+    </div>
+    <div id="loading2" class="loading">
+      <!-- waiting https://assets8.lottiefiles.com/packages/lf20_cAsTAnQtxv.json -->
+      <!-- https://assets8.lottiefiles.com/packages/lf20_8uymq2ak.json -->
+      <!-- checked  https://assets8.lottiefiles.com/packages/lf20_WY43rg.json -->        
+      <lottie-player id="lottie1" src="https://assets8.lottiefiles.com/packages/lf20_09cb206w.json" background="transparent" speed="1" loop autoplay>
+      <!-- Relógio https://assets8.lottiefiles.com/packages/lf20_09cb206w.json -->
+      <!-- Giro cores https://assets8.lottiefiles.com/packages/lf20_TNLWvgoeMy.json -->
+      <!-- barra dinâmica https://assets8.lottiefiles.com/packages/lf20_hgrfG0L3Xo.json -->
+      <!-- <img id="loadingImg" src="https://i.postimg.cc/JzL71tvs/loading1.gif" alt=""> -->
+    </div>
+  </div>
+
+  <footer>
+    <div class="powered">
+      <p>Powered by <a href="https://ufmg-ej.netlify.app/curriculo.html" target="_blank"> <span
+            class="artepatrick">@artepatrick</span></a></p>
+    </div>
+  </footer>
+
+  <script src="./functions/fetchCustomFront.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="./functions/createResponseForMongoDBi.js" ></script>
+  <script src="./functions/fetchApi.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
