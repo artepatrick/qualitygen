@@ -92,9 +92,6 @@ h3 {
     content: "  ]";
 }
 
-
-
-
 strong {
     transition: 0.2s all;
 }
@@ -103,11 +100,6 @@ strong:hover {
     transition: 0.2s all;
     cursor: context-menu;
     color: #9FE090;
-}
-
-p {
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 img {
