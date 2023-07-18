@@ -91,7 +91,7 @@ form.addEventListener("submit", async (event) => {
           apiResponse: param.apiResponse,
       */
     };
-    console.log(`\n\nEnviando para a API:\n${JSON.stringify(param)}`);
+    //console.log(`\n\nEnviando para a API:\n${JSON.stringify(param)}`);
 
     const responseData = await fetchApi(param);
 
@@ -103,8 +103,8 @@ form.addEventListener("submit", async (event) => {
       loadingDiv.style.display  = "block";
       loadingDiv2.style.display  = "none";
       if (!commentInput){commentInputElement.style.display = "none";}
-      console.log(`\n-> Texto retirado do json:\n`);
-      console.log(responseData);
+      //console.log(`\n-> Texto retirado do json:\n`);
+      //console.log(responseData);
 
       
       if (!responseData) {
@@ -239,7 +239,7 @@ function setTime(param) {
   async function personalizaFront(param) {
     try{
       console.log(`\n=====\nPersonalizando o front com a base de dados\n`)
-      console.log(`param: ${param}`);
+      //console.log(`param: ${param}`);
       const apiReturn = await checkAndFetchCustomFront(param);
       const {
         matchChoice,

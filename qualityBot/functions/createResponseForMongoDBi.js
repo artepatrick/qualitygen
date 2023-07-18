@@ -1,10 +1,6 @@
 async function createResponseForMongoDB(param) {
   const { promptInput, matchChoice, commentInput, apiResponse } = param;
-  console.log(
-    `\nIniciando gravação em MongoDB\npromptInput: ${promptInput}\nmatchChoice: ${matchChoice}\ncommentInput: ${commentInput}\napiResponse: ${JSON.stringify(
-      apiResponse
-    )}\n`
-  );
+  // console.log(`\nIniciando gravação em MongoDB\npromptInput: ${promptInput}\nmatchChoice: ${matchChoice}\ncommentInput: ${commentInput}\napiResponse: ${JSON.stringify(apiResponse)}\n`);
 
   const getTime = new Date();
   const response = {
@@ -15,7 +11,7 @@ async function createResponseForMongoDB(param) {
     time: getTime,
   };
   
-  console.log(`\n=====================\nJSON.stringify(response):\n${JSON.stringify(response)}\n=====================\n`);
+  //console.log(`\n=====================\nJSON.stringify(response):\n${JSON.stringify(response)}\n=====================\n`);
 
   return response;
 }

@@ -38,9 +38,9 @@ async function fetchCustomFront(param) {
     }
     
   } else {
-    console.log(
+/*     console.log(
       "matchChoice parece não ter sido recebido na função fetchCustomPrompt\nUsando JSON standard para match_mdquality"
-    );
+    ); */
     const standardResponse = {
       matchChoice: "match_mdquality",
       imgCapa: {
@@ -63,14 +63,14 @@ async function fetchCustomFront(param) {
 async function fetchValidChoices() {
   try {
     const url = "https://artepatrick-mongodb-api.herokuapp.com/validChoices";
-    console.log("Fetching valid choices...");
+    //console.log("Fetching valid choices...");
     const response = await fetch(url, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
     choices = await response.json();
-    console.log('valid choices\n')
-    console.log(choices);
+    //console.log('valid choices\n')
+    //console.log(choices);
 
     return await choices;
   } catch (error) {

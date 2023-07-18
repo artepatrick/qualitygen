@@ -1,10 +1,10 @@
 
 async function fetchApi(param) {
   const { pergunta, matchChoice, commentInput, responseDiv } = param;
-  console.log(`\n=====\nparam`);
+  /* console.log(`\n=====\nparam`);
   console.log(param);
   console.log(`\n===== Stringify\n`);
-  console.log(JSON.stringify(param));
+  console.log(JSON.stringify(param)); */
 
   try {
     const apiUrlPrompt = "https://artepatrick-mongodb-api.herokuapp.com/prompt";
@@ -20,7 +20,7 @@ async function fetchApi(param) {
       throw new Error(`\nopa!\nHTTP error! status: ${finalResponse}`);
     } else {
       console.log(`\n\n\n====\n--> apiResponse.ok = true\n`);
-      console.log(finalResponse);
+      // console.log(finalResponse);
     }
 
     return finalResponse ? finalResponse : null;
