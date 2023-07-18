@@ -19,7 +19,7 @@ console.log(`urlQuery: ${urlQuery}`);
 let matchChoice = "";
 
 if (!urlQuery) {
-  matchChoice = "match_mdquality";
+  matchChoice = "mdquality";
   console.log(`\n=====\nVariável NÃO VEIO de URL:\nmatchChoice: "${matchChoice}" por padrão\nSe quiser parametrizar, use:\nhttps://firstbot-front.netlify.app/?matchchoice=match_documents\nO parâmetro que vem depois do "=" identificará a base de dados de que deseja obter informações\n=====\n`);
   } else {
     matchChoice = urlQuery;
@@ -234,11 +234,13 @@ function setTime(param) {
   },
   promptEnvelop: "String",
 };
- */
+*/
 
   async function personalizaFront(param) {
     try{
-      const apiReturn = await fetchCustomFront(param);
+      console.log(`\n=====\nPersonalizando o front com a base de dados\n`)
+      console.log(`param: ${param}`);
+      const apiReturn = await checkAndFetchCustomFront(param);
       const {
         matchChoice,
         imgCapa: { imgUrl, imgInnerHtml, imgCapaDisplay },
