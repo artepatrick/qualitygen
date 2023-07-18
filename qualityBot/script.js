@@ -23,10 +23,8 @@ if (!urlQuery) {
   console.log(`\n=====\nVariável NÃO VEIO de URL:\nmatchChoice: "${matchChoice}" por padrão\nSe quiser parametrizar, use:\nhttps://firstbot-front.netlify.app/?matchchoice=match_documents\nO parâmetro que vem depois do "=" identificará a base de dados de que deseja obter informações\n=====\n`);
   } else {
     matchChoice = urlQuery;
-    console.log(
-      `\n=====\nVariável VEIO de URL:\nmatchChoice: ${matchChoice}\nSe quiser parametrizar, use:\nhttps://firstbot-front.netlify.app/?matchchoice=match_documents\nO parâmetro que vem depois do "=" identificará a base de dados de que deseja obter informações\n=====\n`
-      );
-    }
+    console.log(`\n=====\nVariável VEIO de URL:\nmatchChoice: ${matchChoice}\nSe quiser parametrizar, use:\nhttps://firstbot-front.netlify.app/?matchchoice=match_documents\nO parâmetro que vem depois do "=" identificará a base de dados de que deseja obter informações\n=====\n`); 
+  }
     
     responseDiv.style.display  = "none";
     loadingDiv.style.display  = "block";
@@ -124,9 +122,7 @@ form.addEventListener("submit", async (event) => {
       responseDiv.textContent = `${JSON.stringify(responseData)}`;
       responseDiv.style.display = "block";
       if(!commentInput){commentInputElement.style.display = "none";}
-      console.log(
-        `\n\nNão foi possível gravar no MongoDB!!\nerro:\n${error}\n\n`
-      );
+      console.log(`\n\nNão foi possível gravar no MongoDB!!\nerro:\n${error}\n\n`);
     }
   }
 });
@@ -194,9 +190,7 @@ async function storeInMongoDB(response) {
 
     return apiReturn;
   } catch (error) {
-    console.log(
-      `Erro ao fazer a requisição para a API\nURL utilizada:\n${urlApiGravaMongo}\nerro:\n${error}`
-    );
+    console.log(`Erro ao fazer a requisição para a API\nURL utilizada:\n${urlApiGravaMongo}\nerro:\n${error}`);
     return error;
   }
 }
@@ -263,7 +257,5 @@ function setTime(param) {
             `<p>O que você deseja saber sobre o grupo Quality hoje?</p>`;
         }
       }
-    }catch(e){
-      console.log(`tivemos um problema ao tentar acessar a base de dados para customizar o front\nerro: ${e}`);
-    }
+    }catch(e){console.log(`tivemos um problema ao tentar acessar a base de dados para customizar o front\nerro: ${e}`);}
   }

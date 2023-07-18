@@ -17,15 +17,15 @@ async function fetchCustomFront(param) {
         body: fetchBody,
       });
     
-      console.log('Response status:', apiResponse.status);
-      console.log('Response headers:', apiResponse.headers);
+      //console.log('Response status:', apiResponse.status);
+      //console.log('Response headers:', apiResponse.headers);
     
       const responseBody = await apiResponse.text();
-      console.log('Response body:', responseBody);
+      //console.log('Response body:', responseBody);
     
       const response = JSON.parse(responseBody);
-      console.log("\n=====\n response:");
-      console.log(response);
+      //console.log("\n=====\n response:");
+      //console.log(response);
       return response;
     } catch (error) {
       console.error(
