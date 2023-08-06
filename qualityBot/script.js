@@ -24,8 +24,7 @@ if (!urlQuery) {
   } else {
     matchChoice = urlQuery;
     console.log(`\n=====\nVariável VEIO de URL:\nmatchChoice: ${matchChoice}\nSe quiser parametrizar, use:\nhttps://firstbot-front.netlify.app/?matchchoice=match_documents\nO parâmetro que vem depois do "=" identificará a base de dados de que deseja obter informações\n=====\n`); 
-  }
-    
+  }    
     responseDiv.style.display  = "none";
     loadingDiv.style.display  = "block";
     loadingDiv2.style.display  = "none";

@@ -16,7 +16,6 @@
 main {
     max-width: 800px;
     margin: 0 15%;
-    transition: margin 0.5s ease-out; /* Add this line */
 }
 
 body {
@@ -27,11 +26,9 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 0;
-    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
 }
 
 .container {
@@ -43,10 +40,9 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    /* height: 80vh; */
 }
 
-.mainTittle{
+.mainTittle {
     display: flex;
     justify-content: center;
 }
@@ -71,7 +67,6 @@ body {
     background-color: var(--user-message-bg-color);
     color: var(--input-field-color);
     align-self: flex-end;
-    
 }
 
 #chatBody p.system {
@@ -105,15 +100,6 @@ body {
 
 #chatForm button:hover {
     background-color: var(--send-button-hover-color);
-}
-
-@keyframes new-message {
-    from {opacity: 0; transform: translateY(100%);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-.new-message {
-    animation: new-message 0.5s ease-out;
 }
 
 @media (max-width: 800px) {
