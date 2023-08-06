@@ -1,0 +1,123 @@
+:root {
+    --font-family: 'Georama', sans-serif;
+    --background-color: #282a36;
+    --text-color: #59C3F2;
+    --container-color: #ffffff;
+    --container-border-color: #6272a4;
+    --user-message-bg-color: #282a36;
+    --system-message-bg-color: #6F8AF6;
+    --input-field-color: #ffffff;
+    --send-button-color: #59C3F2;
+    --send-button-hover-color: #bd93f9;
+    --light0blue-text-field: #E4F0F8;
+    --cursor-purple: #BBA6F2;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 15%;
+    transition: margin 0.5s ease-out; /* Add this line */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.container {
+    max-width: 400px;
+    width: 80%;
+    background-color: var(--container-color);
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* height: 80vh; */
+}
+
+.mainTittle{
+    display: flex;
+    justify-content: center;
+}
+
+#chatBody {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid var(--container-border-color);
+    border-radius: 10px;
+    scroll-behavior: smooth;
+}
+
+#chatBody p {
+    margin: 0 0 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+#chatBody p.user {
+    background-color: var(--user-message-bg-color);
+    color: var(--input-field-color);
+    align-self: flex-end;
+    
+}
+
+#chatBody p.system {
+    background-color: var(--system-message-bg-color);
+    color: var(--input-field-color);
+    margin-left: 15%;
+}
+
+#chatForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+#chatForm input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font-family);
+}
+
+#chatForm button {
+    padding: 8px 20px;
+    border: none;
+    background-color: var(--send-button-color);
+    color: var(--input-field-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#chatForm button:hover {
+    background-color: var(--send-button-hover-color);
+}
+
+@keyframes new-message {
+    from {opacity: 0; transform: translateY(100%);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.new-message {
+    animation: new-message 0.5s ease-out;
+}
+
+@media (max-width: 800px) {
+    main {
+        margin: 0 8%;
+    }
+}

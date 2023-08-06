@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="tolky.to">
+    <meta property="og:description" content="Converse com seu avatar!">
+    <meta property="og:image" content="./src/img/dall-e01.png">
+    <meta name="author" content="Patrick Bonnereau @artepatrick">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="./src/tolky.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>tolky.to</title>
+</head>
+<body>
+    <main>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h1 class="mainTittle">tolky.to</h1>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <!-- Chat messages will be dynamically inserted here. -->
+            </div>
+            <div class="chat-footer">
+                <form id="chatForm">
+                    <input type="text" id="userInput" autocomplete="off" placeholder="Diga Oi...">
+                    <button type="submit" id="submitButton">Send</button>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+    <!-- Link to your JavaScript file here. It is not created yet. -->
+    <div class="powered" style="
+    font-family: 'Cabin', sans-serif;
+    font-size: 0.5em;
+    color: #dddddd;
+    text-align: center;
+    margin: 20px 0;">
+      <p>Powered by <a href="https://ufmg-ej.netlify.app/curriculo.html" target="_blank" style="
+      font-family: righteous, sans-serif;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #27AE60;"> 
+      <span class="artepatrick">@artepatrick</span></a></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
