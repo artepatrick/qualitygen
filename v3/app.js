@@ -15,12 +15,6 @@ const uui = nameToUuiMap[urlQuery] || DEFAULT_UUI;
 
 let chatBody = document.getElementById('chatBody');
 let dialogue = [];
-let observer = new MutationObserver(() => {
-    window.requestAnimationFrame(() => {
-        chatBody.scrollTop = chatBody.scrollHeight;
-    });
-});
-observer.observe(chatBody, { childList: true });
 
 document.getElementById('chatForm').addEventListener('submit', handleFormSubmit);
 
@@ -28,12 +22,9 @@ function updateChatBody() {
     chatBody.innerHTML = '';
     dialogue.forEach(message => {
         const messageElement = document.createElement('p');
-        messageElement.classList.add(message.role, "new-message");
+        messageElement.classList.add(message.role);
         messageElement.textContent = message.content;
         chatBody.appendChild(messageElement);
-        messageElement.addEventListener("animationend", function() {
-            this.classList.remove("new-message");
-        });
     });
 }
 
